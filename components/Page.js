@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Header from './Header';
@@ -15,11 +16,11 @@ const theme = {
 
 const StyledPage = styled.div`
   background: white;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 `;
 
 const Inner = styled.div`
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
 `;
@@ -51,7 +52,7 @@ injectGlobal`
   }
 `;
 
-const Page = ({children}) => (
+const Page = ({ children }) => (
   <ThemeProvider theme={theme}>
     <StyledPage>
       <Meta />
